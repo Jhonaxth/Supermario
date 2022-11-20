@@ -10,6 +10,7 @@ public class SoundManager {
 
     private Clip background;
     private long clipTime = 0;
+    private Clip Dead;
 
     public SoundManager() {
         background = getClip(loadAudio("background"));
@@ -55,13 +56,22 @@ public class SoundManager {
         clipTime = 0;
         resumeBackground();
     }
+    public void playDead()
+    {
+        Dead = getClip(loadAudio("Dead"));
+        Dead.start();
 
+    }
     public void playJump() {
         Clip clip = getClip(loadAudio("jump"));
         clip.start();
 
     }
-
+    public void brickBreak()
+    {
+        Clip clip = getClip(loadAudio("brickBreak"));
+        clip.start();
+    }
     public void playCoin() {
         Clip clip = getClip(loadAudio("coin"));
         clip.start();

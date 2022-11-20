@@ -15,6 +15,7 @@ public class OrdinaryBrick extends Brick {
     private Animation animation;
     private boolean breaking;
     private int frames;
+    private GameEngine engine;
 
     public OrdinaryBrick(double x, double y, BufferedImage style){
         super(x, y, style);
@@ -29,7 +30,6 @@ public class OrdinaryBrick extends Brick {
     private void setAnimation(){
         ImageLoader imageLoader = new ImageLoader();
         BufferedImage[] leftFrames = imageLoader.getBrickFrames();
-
         animation = new Animation(leftFrames, leftFrames);
     }
 

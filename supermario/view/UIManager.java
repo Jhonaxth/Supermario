@@ -100,11 +100,14 @@ public class UIManager extends JPanel{
     }
 
     private void drawVictoryScreen(Graphics2D g2) {
-        g2.setFont(gameFont.deriveFont(50f));
+        g2.setFont(gameFont.deriveFont(35f));
         g2.setColor(Color.WHITE);
         String displayedStr = "YOU WON!";
+        String displayedStr2 = "Press space to choose another level";
+        int stringLength2 = g2.getFontMetrics().stringWidth(displayedStr2);
         int stringLength = g2.getFontMetrics().stringWidth(displayedStr);
         g2.drawString(displayedStr, (getWidth()-stringLength)/2, getHeight()/2);
+        g2.drawString(displayedStr2, (getWidth()-stringLength2)/2, getHeight()/2+100);
     }
 
     private void drawHelpScreen(Graphics2D g2) {

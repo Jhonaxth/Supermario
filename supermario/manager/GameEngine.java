@@ -137,13 +137,14 @@ public class GameEngine implements Runnable {
         updateCamera();
 
         if (isGameOver()) {
+            soundManager.pauseBackground();
+            soundManager.playDead();
             setGameStatus(GameStatus.GAME_OVER);
-        }
+        }   
 
         int missionPassed = passMission();
         if(missionPassed > -1){
             mapManager.acquirePoints(missionPassed);
-            //setGameStatus(GameStatus.MISSION_PASSED);
         } 
         else if(mapManager.endLevel())
         {
@@ -179,7 +180,8 @@ public class GameEngine implements Runnable {
     }
 
     public void receiveInput(ButtonAction input) {
-        if (gameStatus == GameStatus.START_SCREEN) {
+        if (gameStatus == GameStatus.START_SCREEN) 
+        {
             if (input == ButtonAction.SELECT && startScreenSelection == StartScreenSelection.START_GAME) {
                 startGame();
             } else if (input == ButtonAction.SELECT && startScreenSelection == StartScreenSelection.VIEW_ABOUT) {
@@ -342,7 +344,10 @@ public class GameEngine implements Runnable {
     public void playFireFlower() {
         soundManager.playFireFlower();
     }
-
+    public void playBreak()
+    {
+        soundManager.brickBreak();
+    }
     public void playFireball() {
         soundManager.playFireball();
     }

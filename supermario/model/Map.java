@@ -14,8 +14,10 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Map {
+import manager.GameEngine;
 
+public class Map {
+    private GameEngine engine;
     private double remainingTime;
     private Mario mario;
     private ArrayList<Brick> bricks = new ArrayList<>();
@@ -160,6 +162,7 @@ public class Map {
                 bricks.remove(brick);
                 brickIterator.remove();
             }
+            engine.playBreak();
         }
 
         endPoint.updateLocation();
