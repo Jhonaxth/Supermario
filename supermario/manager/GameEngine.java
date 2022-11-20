@@ -163,7 +163,7 @@ public class GameEngine implements Runnable {
         if (marioVelocityX > 0 && mario.getX() - 600 > camera.getX()) {
             shiftAmount = marioVelocityX;
         }
-        if (marioVelocityX < 0 && mario.getX() -1200 > camera.getX())
+        if (marioVelocityX < 0 && mario.getX() > camera.getX())
         {
             shiftAmount = marioVelocityX;
         }

@@ -12,7 +12,6 @@ public class Camera {
         this.frameNumber = 25;
         this.shaking = false;
     }
-
     public double getX() {
         return x;
     }
