@@ -2,7 +2,6 @@ package model.brick;
 
 import manager.GameEngine;
 import manager.MapManager;
-import model.Map;
 import model.prize.Prize;
 import view.Animation;
 import view.ImageLoader;
@@ -40,11 +39,12 @@ public class OrdinaryBrick extends Brick {
             return null;
 
         breaking = true;
+        
         manager.addRevealedBrick(this);
 
         double newX = getX() - 27, newY = getY() - 27;
         setLocation(newX, newY);
-
+        engine.playBreak();
         return null;
     }
 
@@ -55,7 +55,7 @@ public class OrdinaryBrick extends Brick {
     public void animate(){
         if(breaking){
             setStyle(animation.animate(3, true));
-            frames--;
+            frames--;           
         }
     }
 }
