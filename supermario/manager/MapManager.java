@@ -153,7 +153,7 @@ public class MapManager {
             Rectangle brickBottomBounds = brick.getBottomBounds();
             if (marioTopBounds.intersects(brickBottomBounds)) 
             {
-                mario.setVelY(0);
+                mario.setVelY(1);
                 mario.setY(brick.getY() + brick.getDimension().height);
                 Prize prize = brick.reveal(engine);
                 if(prize != null)
