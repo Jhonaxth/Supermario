@@ -5,8 +5,6 @@ import manager.MapManager;
 import model.prize.Prize;
 import view.Animation;
 import view.ImageLoader;
-
-import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class OrdinaryBrick extends Brick {
@@ -14,7 +12,6 @@ public class OrdinaryBrick extends Brick {
     private Animation animation;
     private boolean breaking;
     private int frames;
-    private GameEngine engine;
 
     public OrdinaryBrick(double x, double y, BufferedImage style){
         super(x, y, style);
