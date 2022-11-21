@@ -43,6 +43,9 @@ public class Mario extends GameObject{
 
         super.draw(g);
     }
+    public void fall(GameEngine engine) {
+       setY(getY()+2);
+    }
 
     public void jump(GameEngine engine) {
         if(!isJumping() && !isFalling()){

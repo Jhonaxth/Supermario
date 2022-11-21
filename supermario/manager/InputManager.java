@@ -28,8 +28,11 @@ public class InputManager implements KeyListener, MouseListener{
         else if(keyCode == KeyEvent.VK_DOWN){
             if(status == GameStatus.START_SCREEN || status == GameStatus.MAP_SELECTION)
                 currentAction = ButtonAction.GO_DOWN;
-            else if(status==GameStatus.RUNNING)
+            else if(status==GameStatus.RUNNING){
                 currentAction = ButtonAction.CROUCH;
+                currentAction = ButtonAction.M_DOWN;
+            }
+                
         }
         else if (keyCode == KeyEvent.VK_RIGHT) {
             currentAction = ButtonAction.M_RIGHT;

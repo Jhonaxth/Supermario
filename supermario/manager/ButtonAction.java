@@ -2,6 +2,7 @@ package manager;
 
 public enum ButtonAction {
     JUMP,
+    M_DOWN,
     M_RIGHT,
     M_LEFT,
     CROUCH,

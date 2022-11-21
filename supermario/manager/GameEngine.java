@@ -208,9 +208,11 @@ public class GameEngine implements Runnable {
             Mario mario = mapManager.getMario();
             if (input == ButtonAction.JUMP) {
                 mario.jump(this);
+            } else if (input == ButtonAction.M_DOWN) {
+                mario.fall(this);
             } else if (input == ButtonAction.M_RIGHT) {
                 mario.move(true, camera);
-            } else if (input == ButtonAction.M_LEFT) {
+            }else if (input == ButtonAction.M_LEFT) {
                 mario.move(false, camera);
             } else if (input == ButtonAction.ACTION_COMPLETED) {
                 mario.setVelX(0);
