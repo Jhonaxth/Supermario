@@ -13,7 +13,7 @@ public class SoundManager {
     private Clip Dead;
 
     public SoundManager() {
-        background = getClip(loadAudio("background"));
+        background = getClip(loadAudio("backgrounds"));
         background.loop(Clip.LOOP_CONTINUOUSLY);
     }
 

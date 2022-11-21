@@ -35,7 +35,7 @@ public class UIManager extends JPanel{
         this.selectIcon = loader.loadImage("/select-icon.png");
         this.startScreenImage = loader.loadImage("/start-screen.png");
         this.helpScreenImage = loader.loadImage("/help-screen.png");
-        this.aboutScreenImage = loader.loadImage("/about-screen.png");
+        this.aboutScreenImage = loader.loadImage("/about-screens.png");
         this.gameOverScreen = loader.loadImage("/game-over.png");
 
         try {
