@@ -231,8 +231,6 @@ public class GameEngine implements Runnable {
         }
         else if (gameStatus == GameStatus.MISSION_PASSED && input == ButtonAction.GO_TO_NEXT_LEVEL)
         {
-            Mario mario= mapManager.getMario();
-            mario.resetLocation();
             resetCamera();
             setGameStatus(GameStatus.MAP_SELECTION);
         }
