@@ -21,7 +21,6 @@ public class GameEngine implements Runnable {
     private Thread thread;
     private StartScreenSelection startScreenSelection = StartScreenSelection.START_GAME;
     private int selectedMap = 0;
-
     private GameEngine() {
         init();
     }
@@ -38,7 +37,6 @@ public class GameEngine implements Runnable {
         JFrame frame = new JFrame("Super Mario.");
         frame.add(uiManager);
         frame.addKeyListener(inputManager);
-        frame.addMouseListener(inputManager);
         frame.pack();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setResizable(false);

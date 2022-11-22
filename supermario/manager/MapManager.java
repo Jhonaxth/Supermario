@@ -130,7 +130,7 @@ public class MapManager {
             if (marioBottomBounds.intersects(enemyTopBounds)) {
                 mario.acquirePoints(100);
                 toBeRemoved.add(enemy);
-                mario.jump(engine);
+               // mario.jump(engine);
                 engine.playStomp();
             }
         }
